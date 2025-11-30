@@ -4,13 +4,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  "projectId": "peerconnect-20kln",
-  "appId": "1:875432017464:web:b2392f79dd2a48e99730cd",
-  "storageBucket": "peerconnect-20kln.firebasestorage.app",
-  "apiKey": "AIzaSyDhR9UJWlfO2aO7DiREV1RhSYRNzYAcZ0I",
-  "authDomain": "peerconnect-20kln.firebaseapp.com",
-  "measurementId": "",
-  "messagingSenderId": "875432017464"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID,
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
